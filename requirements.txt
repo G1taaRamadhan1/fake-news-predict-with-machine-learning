@@ -1,6 +1,5 @@
 pandas==2.2.3
 numpy==1.22.4
-numpydoc @ file:///tmp/build/80754af9/numpydoc_1605117425582/work
 matplotlib @ file:///C:/ci/matplotlib-suite_1634667159685/work
 matplotlib-inline @ file:///tmp/build/80754af9/matplotlib-inline_1628242447089/work
 seaborn==0.13.2
