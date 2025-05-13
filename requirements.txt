@@ -7,7 +7,7 @@ scikit-image
 scikit-learn
 streamlit
 requests 
-nltk==3.6.5
+nltk
 cloudpickle 
 pickleshare 
 joblib
