@@ -4,15 +4,28 @@ import numpy as np
 import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 import nltk
+from nltk import downloader
 import re
 import string
 from nltk.corpus import stopwords
 
-# Download stopwords jika belum pernah
+# Fungsi untuk mengunduh resource NLTK
+def download_nltk_resources(resource):
+    try:
+        nltk.data.find(resource)
+    except nltk.downloader.DownloadError:
+        st.warning(f"Mengunduh resource NLTK: '{resource}'. Ini mungkin memakan waktu sebentar saat pertama kali dijalankan.")
+        nltk.download(resource)
+        st.info(f"Resource NLTK '{resource}' berhasil diunduh.")
+
+# Unduh resource 'punkt' untuk tokenisasi
+download_nltk_resources('tokenizers/punkt')
+
+# Unduh stopwords jika belum pernah
 try:
     stopwords.words('english')
 except LookupError:
-    nltk.download('stopwords')
+    download_nltk_resources('corpora/stopwords')
 stop_words = set(stopwords.words('english'))
 
 # Fungsi untuk pra-pemrosesan teks (sesuaikan dengan yang Anda gunakan)
@@ -30,9 +43,9 @@ def preprocess_text(text):
 # Load model dan vectorizer
 try:
     tfidf_vectorizer = joblib.load('tfidf_vectorizer.pkl')
-    model = joblib.load('LR_model.pkl')
+    model = joblib.load('best_lr_model.pkl')
 except FileNotFoundError:
-    st.error("File model atau vectorizer tidak ditemukan. Pastikan 'tfidf_vectorizer.pkl' dan 'LR_model.pkl' ada di direktori yang sama.")
+    st.error("File model atau vectorizer tidak ditemukan. Pastikan 'tfidf_vectorizer.pkl' dan 'best_lr_model.pkl' ada di direktori yang sama.")
     st.stop()
 
 # Judul aplikasi
