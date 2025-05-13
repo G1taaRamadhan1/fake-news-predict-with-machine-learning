@@ -15,11 +15,6 @@ try:
 except LookupError:
     nltk.download('stopwords')
 
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
-
 stop_words = set(stopwords.words('english'))
 
 # Fungsi untuk pra-pemrosesan teks (sesuaikan dengan yang Anda gunakan)
