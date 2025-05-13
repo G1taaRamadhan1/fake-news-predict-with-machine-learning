@@ -30,9 +30,9 @@ def preprocess_text(text):
 # Load model dan vectorizer
 try:
     tfidf_vectorizer = joblib.load('tfidf_vectorizer.pkl')
-    model = joblib.load('best_lr_model.pkl')
+    model = joblib.load('LR_model.pkl')
 except FileNotFoundError:
-    st.error("File model atau vectorizer tidak ditemukan. Pastikan 'tfidf_vectorizer.pkl' dan 'best_lr_model.pkl' ada di direktori yang sama.")
+    st.error("File model atau vectorizer tidak ditemukan. Pastikan 'tfidf_vectorizer.pkl' dan 'LR_model.pkl' ada di direktori yang sama.")
     st.stop()
 
 # Judul aplikasi
