@@ -3,8 +3,8 @@ numpy==2.0.2
 matplotlib 
 matplotlib-inline 
 seaborn==0.13.2
-scikit-image==0.18.3
-scikit-learn==1.5.2
+scikit-image
+scikit-learn
 streamlit
 requests 
 nltk==3.6.5
