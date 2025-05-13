@@ -9,12 +9,10 @@ import string
 from nltk.corpus import stopwords
 
 # Download stopwords jika belum pernah
-# Download resources NLTK jika belum pernah
 try:
     stopwords.words('english')
 except LookupError:
     nltk.download('stopwords')
-
 stop_words = set(stopwords.words('english'))
 
 # Fungsi untuk pra-pemrosesan teks (sesuaikan dengan yang Anda gunakan)
