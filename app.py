@@ -11,22 +11,22 @@ from sklearn.linear_model import LogisticRegression
 import pickle
 
 # Download resources NLTK 
-try:
-    nltk.data.find('corpora/stopwords')
-except nltk.downloader.DownloadError:
-    nltk.download('stopwords')
-try:
-    nltk.data.find('tokenizers/punkt')
-except nltk.downloader.DownloadError:
-    nltk.download('punkt')
-try:
-    nltk.data.find('corpora/wordnet')
-except nltk.downloader.DownloadError:
-    nltk.download('wordnet')
-try:
-    nltk.data.find('corpora/omw-1.4')
-except nltk.downloader.DownloadError:
-    nltk.download('omw-1.4')
+# try:
+#     nltk.data.find('corpora/stopwords')
+# except nltk.downloader.DownloadError:
+#     nltk.download('stopwords')
+# try:
+#     nltk.data.find('tokenizers/punkt')
+# except nltk.downloader.DownloadError:
+#     nltk.download('punkt')
+# try:
+#     nltk.data.find('corpora/wordnet')
+# except nltk.downloader.DownloadError:
+#     nltk.download('wordnet')
+# try:
+#     nltk.data.find('corpora/omw-1.4')
+# except nltk.downloader.DownloadError:
+#     nltk.download('omw-1.4')
 
 # Inisialisasi lemmatizer dan stopwords
 lemmatizer = WordNetLemmatizer()
