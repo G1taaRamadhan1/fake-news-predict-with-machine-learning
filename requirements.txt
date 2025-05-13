@@ -10,6 +10,5 @@ requests
 nltk==3.6.5
 cloudpickle 
 pickleshare 
-googlecolab
 joblib
 setuptools
