@@ -6,8 +6,11 @@ seaborn==0.13.2
 scikit-image==0.18.3
 scikit-learn==1.5.2
 scikit-learn-intelex
+streamlit
 requests 
 nltk==3.6.5
 cloudpickle 
 pickleshare 
 googlecolab
+joblib
+setuptools
