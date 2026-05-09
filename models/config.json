@@ -1,0 +1,8 @@
+{
+  "MAX_LEN": 200,
+  "best_model": "Passive Aggressive Classifier",
+  "best_f1": 0.986,
+  "best_accuracy": 0.9871,
+  "training_size": 31058,
+  "test_size": 7765
+}

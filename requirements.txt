@@ -1,14 +1,5 @@
-pandas==2.2.3
-numpy==2.0.2
-matplotlib 
-matplotlib-inline 
-seaborn==0.13.2
-scikit-image
-scikit-learn
 streamlit
-requests 
-nltk
-cloudpickle 
-pickleshare 
+scikit-learn
 joblib
-setuptools
+numpy
+pandas
