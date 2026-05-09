@@ -1,3 +1,5 @@
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://fake-news-predict-with-machine-learning-ywh9yfhnyswgrhjrgsagz9.streamlit.app)
+
 # Fake News Detector — Streamlit App (Lite Version)
 
 A web app for predicting whether a news article is Real or Fake, using an ensemble of 3 ML models trained on the ISOT Fake News Dataset.
@@ -6,26 +8,12 @@ This is the **lite version** — no TensorFlow needed, much faster to install an
 
 ## Features
 
-- 📝 **Paste any article** in English — the app cleans, vectorizes, and predicts
-- 🤖 **3 models running together**: Logistic Regression, Naive Bayes, Passive Aggressive
-- 📊 **Per-model breakdown** + ensemble verdict + confidence score
-- 📋 **Pre-loaded examples** to test quickly
-- ⚠️ **Disagreement warning** when models disagree on a verdict
+- **Paste any article** in English — the app cleans, vectorizes, and predicts
+- **3 models running together**: Logistic Regression, Naive Bayes, Passive Aggressive
+- **Per-model breakdown** + ensemble verdict + confidence score
+- **Pre-loaded examples** to test quickly
+- **Disagreement warning** when models disagree on a verdict
 
-## Why Lite?
-
-The full version uses 4 models (3 ML + 1 BiLSTM deep learning). This lite version drops BiLSTM. Pros and cons:
-
-| | Full version | Lite version (this) |
-|---|---|---|
-| Models | 4 (3 ML + BiLSTM) | 3 (ML only) |
-| Dependencies | ~600 MB (TensorFlow) | ~50 MB |
-| Install time | 5-10 min | 30 sec |
-| Cold start | 30 sec | 1 sec |
-| Model size | 7.8 MB | 1.7 MB |
-| Best F1 | 0.9860 | **0.9860** (same — Passive Aggressive is winner) |
-
-For most use cases, the lite version is **better** — same accuracy, much faster.
 
 ## Project Structure
 
@@ -43,30 +31,6 @@ streamlit_app/
 ```
 
 Total artifact size: ~1.7 MB.
-
-## Run Locally
-
-### 1. Install dependencies
-
-```bash
-cd streamlit_app
-pip install -r requirements.txt
-```
-
-### 2. Run the app
-
-```bash
-streamlit run app.py
-```
-
-The app will open in your browser at `http://localhost:8501`.
-
-## Deploy on Streamlit Community Cloud (Free)
-
-1. Push this folder to GitHub
-2. Go to [share.streamlit.io](https://share.streamlit.io/) → New app → Pick repo → Deploy
-
-First deployment takes about 1 minute (no TensorFlow to install).
 
 ## How It Works
 
