@@ -4,7 +4,7 @@
 
 A web app for predicting whether a news article is Real or Fake, using an ensemble of 3 ML models trained on the ISOT Fake News Dataset.
 
-This is the **lite version** — no TensorFlow needed, much faster to install and deploy.
+This is the **lite version** — no TensorFlow needed, much faster to install and deploy. This Project is for submitting Final Project Data Science Bootcamp from Digital Skola Batch 46.
 
 ## Features
 
@@ -59,3 +59,5 @@ The model was trained on a specific dataset (Reuters real news vs Wikipedia-flag
 - Short text (less than ~20 words)
 
 The model also relies partly on writing **style** rather than facts, so well-written misinformation could fool it. Use this as an educational demo, not a production fact-checker.
+
+
