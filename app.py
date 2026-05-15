@@ -21,7 +21,6 @@ from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 # ---------------------------------------------------------------------------
 st.set_page_config(
     page_title="Fake News Detector",
-    page_icon="📰",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -102,7 +101,7 @@ def main():
         artifacts = load_artifacts()
 
     # Title and description
-    st.title('📰 Fake News Detector')
+    st.title('Fake News Detector')
     st.markdown(
         'Predict whether a news article is **Real** or **Fake** using an ensemble of '
         '3 ML models trained on the ISOT Fake News Dataset.'
@@ -132,7 +131,7 @@ def main():
                    f"tested on {cfg['test_size']:,} articles.")
 
         st.divider()
-        st.subheader('⚠️ Limitations')
+        st.subheader('Limitations')
         st.warning(
             'This model was trained on Reuters (real) and Wikipedia-flagged sources '
             '(fake) from 2016-2017. Articles from outside this distribution may be '
@@ -140,7 +139,7 @@ def main():
         )
 
     # Main content area
-    tab1, tab2, tab3 = st.tabs(['🔍 Predict', '📋 Examples', 'ℹ️ How it works'])
+    tab1, tab2, tab3 = st.tabs(['Predict', 'Examples', 'How it works'])
 
     # ----- TAB 1: PREDICT -----
     with tab1:
@@ -187,7 +186,7 @@ def main():
         }
 
         for label, text in examples.items():
-            with st.expander(f'📄 {label}'):
+            with st.expander(f'{label}'):
                 st.text(text)
                 if st.button(f'Predict this →', key=f'btn_{label}'):
                     with st.spinner('Running 3 models...'):
@@ -275,7 +274,7 @@ def show_prediction(result):
     # Disagreement warning
     preds = [result['lr'] >= 0.5, result['nb'] >= 0.5, result['pac'] >= 0.5]
     if len(set(preds)) > 1:
-        st.warning('⚠️ The 3 models disagree on this article. Treat the ensemble result with caution.')
+        st.warning('The 3 models disagree on this article. Treat the ensemble result with caution.')
 
 
 if __name__ == '__main__':
